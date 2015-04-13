@@ -43,7 +43,17 @@
     "php": ">=5.4",
     "composer/installers": "~1.0.12",
     "vlucas/phpdotenv": "~1.0.9",
-    "johnpbloch/wordpress": "4.1.1"
+    "johnpbloch/wordpress": "4.1.1",
+    "roots/wp-h5bp-htaccess": "~1.1",
+    "wpackagist-plugin/regenerate-thumbnails":"*",
+    "wpackagist-plugin/mailchimp-for-wp": "*",
+    "wpackagist-plugin/contact-form-7": "*",
+    "wpackagist-plugin/really-simple-captcha": "1.8.0.1",
+    "wpackagist-plugin/contact-form-7-datepicker": "~2.4",
+    "wpackagist-plugin/contact-form-7-modules": "~1.4",
+    "wpackagist-plugin/contact-form-7-city-field-extension": "~1.0",
+    "wpackagist-plugin/contact-form-7-extras": "~0.1",
+    "wpackagist-plugin/contact-form-7-to-database-extension": "~2.8"
   },
   "extra": {
     "installer-paths": {
