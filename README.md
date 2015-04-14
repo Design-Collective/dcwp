@@ -29,14 +29,7 @@ Base WordPress starter project built on [Roots/Bedrock](https://roots.io/bedrock
   * follow the instructions to update the remote url, e.g.:
   `git remote set-url origin https://github.com/Design-Collective/my-new-repo`
 3. Run `composer install`
-4. If you wish to clone the [DesignCollective/sage](https://github.com/Design-Collective/sage) starter theme:
-  * Go to the themes folder: `cd web/app/themes`
-  * Clone the starter theme:
-    `curl https://github.com/Design-Collective/sage mytheme`
-  * Go to the `mytheme` folder: `cd mytheme`
-  * Remove the .git folder `rm -rf .git`
-  * Add the theme folder to your repository: `git add mytheme`
-  * Commit your changes: `git commit -am "Added starter theme"`
+4. If you wish to clone the [DesignCollective/sage](https://github.com/Design-Collective/sage) starter theme, follow the instructions in the repository.
 5. Push your local repo to your new repository: `git push origin master`
 
 ### Configure local project
