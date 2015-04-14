@@ -6,28 +6,43 @@ Base WordPress starter project built on [Roots/Bedrock](https://roots.io/bedrock
 
 * [Setup](#setup)
 
-## Setup
+## New Project Setup
 
 1. Clone project repo
   * Go to your Sites folder: `cd ~/Sites`.
   * Run `git clone https://github.com/Design-Collective/dcwp myproject`
-2. Run `cd myproject` and `composer install`
-3. Copy `.env.example` to `.env` and update environment variables:
-  * `DB_NAME` - Local database name
-  * `DB_USER` - Local database user
-  * `DB_PASSWORD` - Local database password
-  * `DB_HOST` - Local database host (defaults to `localhost`)
+2. Create remote repository
+  * Go to [https://github.com/new](https://github.com/new) and setup the new repo
+  * follow the instructions to update the remote url, e.g.:
+  `git remote set-url origin https://github.com/Design-Collective/my-new-repo`
+3. Run `composer install`
+4. If you wish to clone the [DesignCollective/sage](https://github.com/Design-Collective/sage) starter theme:
+  * Go to the themes folder: `cd web/app/themes`
+  * Clone the starter theme:
+    `curl https://github.com/Design-Collective/sage mytheme`
+  * Go to the `mytheme` folder: `cd mytheme`
+  * Remove the .git folder `rm -rf .git`
+  * Add the theme folder to your repository: `git add mytheme`
+  * Commit your changes: `git commit -am "Added starter theme"`
+5. Push your local repo to your new repository: `git push origin master`
+
+## Configure local project
+6. Copy `.env.example` to `.env` and update environment variables:
+  * `DB_NAME` - Database name
+  * `DB_USER` - Database user
+  * `DB_PASSWORD` - Database password
+  * `DB_HOST` - Database host (defaults to `localhost`)
   * `WP_ENV` - Set to environment (`development`, `staging`, `production`, etc)
-  * `WP_HOME` - Full URL to WordPress home (http://myproject.dev)
-  * `WP_SITEURL` - Full URL to WordPress including subdirectory (http://myproject.dev/wp)
-4. (Optional) Setup local domain mapping for new project
-5. Access WP Admin at `http://project.dev/wp/wp-admin`
+  * `WP_HOME` - Full URL to WordPress home (http://example.com)
+  * `WP_SITEURL` - Full URL to WordPress including subdirectory (http://example.com/wp)
+7. Access WP Admin at `http://project.dev/wp/wp-admin`
 
 
 ## Questions?
 For more information, see [Bedrock](https://roots.io/bedrock/)
 
-## Documentation Excerpts
+
+## Additional Documentation
 
 ### Configuration Files
 
@@ -104,3 +119,12 @@ Note: Some plugins may create files or folders outside of their given scope, or 
 * Rollback: `cap staging deploy:rollback`
 
 Composer support is built-in so when you run a deploy, `composer install` is automatically run on the server.
+
+
+## How to merge/update this repo from [Roots/Bedrock](https://roots.io/bedrock/)
+To setup upstream capabilities in order to merge/update from upstream, you need to run the following:
+  * `git remote add upstream https://github.com/roots/bedrock`
+  * `git fetch upstream`
+  Commits to the remote master will be stored in a local branch, upstream/master.
+  * Checkout local master branch: `git checkout master`
+  * Merge upstream/master branch to sync with upstream: `git merge upstream/master`
