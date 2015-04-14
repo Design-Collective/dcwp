@@ -5,8 +5,21 @@ Base WordPress starter project built on [Roots/Bedrock](https://roots.io/bedrock
 # ToC
 
 * [Setup](#setup)
+	* [Setup New Project](#setup-new-project)
+	* [Configure Local Project](#configure-local-project)
+	* [Questions](#questions)
+* [Additional Documentation](#additional-documentation)
+	* [Configuration Files](#configuration-files)
+	* [Environment Variables](#environment-variables)
+	* [Composer](#composer)
+	* [Plugins](#plugins)
+	* [Capistrano](#capistrano)
+* [Updates](#updates)
 
-## New Project Setup
+
+## Setup 
+
+### Setup New Project
 
 1. Clone project repo
   * Go to your Sites folder: `cd ~/Sites`.
@@ -26,7 +39,7 @@ Base WordPress starter project built on [Roots/Bedrock](https://roots.io/bedrock
   * Commit your changes: `git commit -am "Added starter theme"`
 5. Push your local repo to your new repository: `git push origin master`
 
-## Configure local project
+### Configure local project
 6. Copy `.env.example` to `.env` and update environment variables:
   * `DB_NAME` - Database name
   * `DB_USER` - Database user
@@ -38,7 +51,7 @@ Base WordPress starter project built on [Roots/Bedrock](https://roots.io/bedrock
 7. Access WP Admin at `http://project.dev/wp/wp-admin`
 
 
-## Questions?
+### Questions?
 For more information, see [Bedrock](https://roots.io/bedrock/)
 
 
@@ -121,7 +134,8 @@ Note: Some plugins may create files or folders outside of their given scope, or 
 Composer support is built-in so when you run a deploy, `composer install` is automatically run on the server.
 
 
-## How to merge/update this repo from [Roots/Bedrock](https://roots.io/bedrock/)
+## Updates
+If you plan to merge/update this repo from [Roots/Bedrock](https://roots.io/bedrock/)
 To setup upstream capabilities in order to merge/update from upstream, you need to run the following:
   * `git remote add upstream https://github.com/roots/bedrock`
   * `git fetch upstream`
