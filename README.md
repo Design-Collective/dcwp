@@ -128,8 +128,9 @@ Composer support is built-in so when you run a deploy, `composer install` is aut
 
 
 ## Updates
-If you plan to merge/update this repo from [Roots/Bedrock](https://roots.io/bedrock/)
-To setup upstream capabilities in order to merge/update from upstream, you need to run the following:
+If you plan to merge/update this repo from [Roots/Bedrock](https://roots.io/bedrock/) you will need to setup the `upstream` remote in order to merge/update from upstream.
+
+Run the following commands:
   * `git remote add upstream https://github.com/roots/bedrock`
   * `git fetch upstream`
   Commits to the remote master will be stored in a local branch, upstream/master.
